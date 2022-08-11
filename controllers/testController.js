@@ -5,18 +5,18 @@ import Empleado from "../models/Empleado.js";
 const registrarTest = async (req, res)=>{
 
     // *req.body no trae lo que le enviamos a la URL
-    const {idEmpleado} = req.body;
+    // const {idEmpleado} = req.body;
 
     // ? Prevenir si un usuario ya esta registarado
     // *FindOne busca por lo diferentes atributos del modelo
-    const existeUsuario = await Empleado.findOne({idEmpleado});
+    // const existeUsuario = await Empleado.findOne({idEmpleado});
 
     
 
-    if(existeUsuario){
-        const error = new Error('El empleado ya registro sus respuestas');
-        return res.status(400).json({msg: error.message});
-    }
+    // if(existeUsuario){
+    //     const error = new Error('El empleado ya registro sus respuestas');
+    //     return res.status(400).json({msg: error.message});
+    // }
     
     try {
         // *Guardar informacion del test
